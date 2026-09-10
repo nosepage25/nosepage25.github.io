@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>返乡 - 返乡政策指南与家乡发展观察</title>
+    <meta name="description" content="返乡政策、交通出行、家乡变化与创业就业信息汇总，为返乡人员提供实用的参考指南，助力顺利返乡与乡村发展。">
+    <meta name="keywords" content="返乡,返乡政策,返乡创业,家乡变化,春运出行,乡村振兴,回老家">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 顶部提示条 */
+        .top-bar {
+            background-color: #1a4d2e;
+            color: #e8f5e9;
+            font-size: 14px;
+            padding: 8px 0;
+            text-align: center;
+        }
+        .top-bar span {
+            margin: 0 15px;
+        }
+        /* 页眉 */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo a {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a4d2e;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .logo small {
+            font-size: 14px;
+            font-weight: 400;
+            color: #666;
+            margin-left: 8px;
+            letter-spacing: 0;
+        }
+        nav.main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav.main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.2s;
+            padding: 5px 0;
+        }
+        nav.main-nav a:hover {
+            color: #1a4d2e;
+            border-bottom: 2px solid #1a4d2e;
+        }
+        /* 移动端导航 */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid #ccc;
+            font-size: 24px;
+            padding: 4px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav.main-nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                padding: 10px 0;
+            }
+            nav.main-nav.open {
+                display: block;
+            }
+            nav.main-nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 0 20px;
+            }
+            nav.main-nav li {
+                border-bottom: 1px solid #eee;
+            }
+            nav.main-nav a {
+                display: block;
+                padding: 12px 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+        /* 主视觉区域 */
+        .hero {
+            background: linear-gradient(135deg, #1a4d2e 0%, #2e7d32 40%, #4caf50 100%);
+            color: #fff;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-text h1 {
+            font-size: 38px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .hero-text p {
+            font-size: 17px;
+            opacity: 0.95;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+            background: rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 15px 25px;
+            min-width: 100px;
+        }
+        .stat-item .num {
+            font-size: 28px;
+            font-weight: 700;
+            display: block;
+        }
+        .stat-item .label {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        .hero-cta {
+            background: #fff;
+            color: #1a4d2e;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .hero-text h1 {
+                font-size: 30px;
+            }
+        }
+        /* 快速导航卡片 */
+        .quick-nav {
+            margin: -30px auto 40px;
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        .quick-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        .quick-item {
+            text-align: center;
+            padding: 20px 10px;
+            border-radius: 12px;
+            transition: background 0.2s;
+            text-decoration: none;
+            color: #333;
+        }
+        .quick-item:hover {
+            background: #e8f5e9;
+        }
+        .quick-item .icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .quick-item h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: #1a4d2e;
+        }
+        .quick-item p {
+            font-size: 13px;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .quick-nav-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            .quick-nav-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* 通用区块 */
+        .section {
+            padding: 40px 0;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a4d2e;
+            position: relative;
+            padding-left: 18px;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 6px;
+            height: 28px;
+            background: #4caf50;
+            border-radius: 3px;
+        }
+        .section-sub {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .grid-3col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        @media (max-width: 768px) {
+            .grid-2col, .grid-3col {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* 卡片 */
+        .card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #f0f0f0;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+        .card .tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #1a4d2e;
+            border-radius: 20px;
+            padding: 3px 12px;
+            font-size: 12px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .card .date {
+            color: #999;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+        /* 政策列表 */
+        .policy-list {
+            background: #fff;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .policy-item {
+            display: flex;
+            gap: 20px;
+            padding: 18px 0;
+            border-bottom: 1px solid #f0f0f0;
+            align-items: flex-start;
+        }
+        .policy-item:last-child {
+            border-bottom: none;
+        }
+        .policy-year {
+            background: #1a4d2e;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            margin-top: 4px;
+        }
+        .policy-content h4 {
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        .policy-content p {
+            font-size: 14px;
+            color: #555;
+        }
+        /* 家乡发展模块 */
+        .development-box {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+        }
+        .dev-header {
+            background: linear-gradient(135deg, #1a4d2e, #2e7d32);
+            color: #fff;
+            padding: 25px 30px;
+        }
+        .dev-header h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        .dev-body {
+            padding: 25px 30px;
+        }
+        .dev-item {
+            display: flex;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        .dev-item .icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        .dev-item strong {
+            display: block;
+            margin-bottom: 4px;
+            color: #1a4d2e;
+        }
+        .dev-item p {
+            font-size: 14px;
+            color: #555;
+        }
+        /* 交通出行 */
+        .traffic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .traffic-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+        }
+        .traffic-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .traffic-card h4 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #1a4d2e;
+        }
+        .traffic-card p {
+            font-size: 14px;
+            color: #555;
+        }
+        .traffic-card .highlight {
+            background: #fff8e1;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #8a6d3b;
+        }
+        @media (max-width: 768px) {
+            .traffic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* FAQ */
+        .faq-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fafbfc;
+            font-size: 16px;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 22px;
+            color: #1a4d2e;
+            transition: transform 0.2s;
+        }
+        .faq-item.open .faq-question::after {
+            content: '−';
+        }
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+        }
+        .faq-item.open .faq-answer {
+            padding: 0 25px 20px;
+            max-height: 300px;
+        }
+        /* 创业/就业 */
+        .job-section {
+            background: #f0f7f0;
+            padding: 50px 0;
+        }
+        .job-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 25px;
+            border-left: 4px solid #1a4d2e;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            margin-bottom: 20px;
+        }
+        .job-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1a4d2e;
+        }
+        .job-card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .job-card .support-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .job-card .support-list li {
+            background: #e8f5e9;
+            color: #1a4d2e;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 13px;
+        }
+        /* 友情链接 / 相关 */
+        .footer-links {
+            background: #263238;
+            color: #b0bec5;
+            padding: 40px 0 20px;
+        }
+        .footer-links h4 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+        .footer-links a {
+            color: #90a4ae;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer-links a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            background: #1a2429;
+            color: #78909c;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+        @media (max-width: 768px) {
+            .footer-col {
+                margin-bottom: 30px;
+            }
+        }
+        /* 响应式表格 */
+        .responsive-table {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        th {
+            background: #1a4d2e;
+            color: #fff;
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 14px;
+        }
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover td {
+            background: #f8fdf8;
+        }
+        /* 实用工具条 */
+        .toolbar {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-bottom: 30px;
+        }
+        .toolbar a {
+            background: #1a4d2e;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .toolbar a:hover {
+            background: #2e7d32;
+        }
+        .toolbar .tips {
+            color: #666;
+            font-size: 14px;
+        }
+        /* 回到顶部 */
+        .back-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1a4d2e;
+            color: #fff;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 99;
+            border: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .back-top:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部信息 -->
+    <div class="top-bar">
+        <div class="container">
+            <span>🌾 返乡季 · 政策与出行指南</span>
+            <span>🚌 春运服务专区</span>
+            <span>💼 返乡创业支持</span>
+        </div>
+    </div>
+
+    <!-- 页眉 -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="#">返乡<span>乡</span></a>
+                <small>家乡发展观察</small>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="打开菜单">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#policy">政策指南</a></li>
+                    <li><a href="#traffic">交通出行</a></li>
+                    <li><a href="#development">家乡变化</a></li>
+                    <li><a href="#job">就业创业</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主视觉 Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">2025 返乡服务专题</span>
+                <h1>返乡，是一场<br>双向奔赴的温暖</h1>
+                <p>从城市回到家乡，不仅仅是一次地理上的迁移。我们为你汇总返乡政策、交通信息、家乡发展动态与创业机会，让每一次出发与回归都从容有序。</p>
+                <a href="#policy" class="hero-cta">了解最新动态</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="num">23</span>
+                    <span class="label">省份更新返乡指引</span>
+                </div>
+                <div class="stat-item">
+                    <span class="num">150+</span>
+                    <span class="label">县市开通返乡专线</span>
+                </div>
+                <div class="stat-item">
+                    <span class="num">92%</span>
+                    <span class="label">务工者对家乡认同感提升</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 快速导航 -->
+    <div class="quick-nav">
+        <div class="quick-nav-grid">
+            <a href="#policy" class="quick-item">
+                <div class="icon">📋</div>
+                <h3>政策速查</h3>
+                <p>返乡隔离、报备、补贴</p>
+            </a>
+            <a href="#traffic" class="quick-item">
+                <div class="icon">🚄</div>
+                <h3>出行助手</h3>
+                <p>车票、航班、自驾路况</p>
+            </a>
+            <a href="#development" class="quick-item">
+                <div class="icon">🏡</div>
+                <h3>家乡新貌</h3>
+                <p>产业、基建、文化生活</p>
+            </a>
+            <a href="#job" class="quick-item">
+                <div class="icon">💼</div>
+                <h3>创业就业</h3>
+                <p>岗位信息与扶持政策</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- 政策指南 -->
+    <section class="section" id="policy">
+        <div class="container">
+            <h2 class="section-title">返乡政策与防疫指南</h2>
+            <p class="section-sub">信息仅供参考，具体以当地最新发布为准</p>
+            
+            <div class="grid-2col" style="margin-bottom: 30px;">
+                <div class="policy-list">
+                    <h3 style="margin-bottom: 20px; color: #1a4d2e; font-size: 20px;">📌 各地返乡要点</h3>
+                    <div class="policy-item">
+                        <span class="policy-year">华东</span>
+                        <div class="policy-content">
+                            <h4>返乡报备与健康监测</h4>
+                            <p>部分县市要求提前3天报备，落实个人防护。具体可咨询目的地疾控部门。</p>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <span class="policy-year">华南</span>
+                        <div class="policy-content">
+                            <h4>交通枢纽核酸服务</h4>
+                            <p>广州、深圳等主要站点设置了返乡人员服务点，提供快速检测与咨询。</p>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <span class="policy-year">西南</span>
+                        <div class="policy-content">
+                            <h4>山区道路安全提示</h4>
+                            <p>冬季多雨雾，自驾返乡请关注路况信息，备好防滑链等应急物品。</p>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <span class="policy-year">东北</span>
+                        <div class="policy-content">
+                            <h4>低温天气应对</h4>
+                            <p>注意保暖，农村地区取暖时需防范一氧化碳中毒，保持通风。</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card" style="background: #e8f5e9; border: 1px solid #c8e6c9;">
+                        <span class="tag">实用工具</span>
+                        <h3>返乡信息查询</h3>
+                        <p style="margin-bottom: 15px;">可查询出发地与目的地的交通、天气、防疫动态。信息会动态更新，出行前建议再次确认。</p>
+                        <div style="background: #fff; border-radius: 10px; padding: 15px; margin-top: 15px;">
+                            <strong style="color: #1a4d2e;">💡 提示</strong>
+                            <p style="margin-top: 8px;">春运期间人流量大，请预留充足时间到达车站/机场。带好身份证件，照顾好随行老人与儿童。</p>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-top: 20px;">
+                        <span class="tag">重点提醒</span>
+                        <h3>健康防护不放松</h3>
+                        <p>返乡途中及假期聚会，建议科学佩戴口罩、勤洗手。若出现发热等症状，及时就医并减少聚集活动。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 交通出行 -->
+    <section class="section" id="traffic" style="background: #fff; border-radius: 20px; margin: 0 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+        <div class="container" style="padding: 30px 20px;">
+            <h2 class="section-title">返乡交通出行参考</h2>
+            <p class="section-sub">选择最适合的方式，平安抵达</p>
+            <div class="traffic-grid">
+                <div class="traffic-card">
+                    <div class="icon">🚄</div>
+                    <h4>铁路出行</h4>
+                    <p>春运期间增开多趟临客，热门线路请提前关注余票。候补购票功能可提高成功率。</p>
+                    <div class="highlight">建议提前15天关注售票信息</div>
+                </div>
+                <div class="traffic-card">
+                    <div class="icon">✈️</div>
+                    <h4>民航出行</h4>
+                    <p>多地机场开通返乡包机与加班航班，部分中小城市机场吞吐量提升明显。</p>
+                    <div class="highlight">关注机场巴士与接驳信息</div>
+                </div>
+                <div class="traffic-card">
+                    <div class="icon">🚗</div>
+                    <h4>自驾返乡</h4>
+                    <p>高速公路免费通行时间段需记牢。提前检查车辆，避免疲劳驾驶。</p>
+                    <div class="highlight">避开高峰时段，错峰出行</div>
+                </div>
+            </div>
+            <div style="margin-top: 30px;">
+                <div class="responsive-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>交通方式</th>
+                                <th>优点</th>
+                                <th>注意事项</th>
+                                <th>适合人群</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🚄 高铁/动车</td>
+                                <td>准点率高，舒适</td>
+                                <td>热门线路需抢票</td>
+                                <td>中长途、带小孩家庭</td>
+                            </tr>
+                            <tr>
+                                <td>🚌 长途大巴</td>
+                                <td>班次多，可达乡镇</td>
+                                <td>时间较长，注意休息</td>
+                                <td>邻近城市、乡镇中转</td>
+                            </tr>
+                            <tr>
+                                <td>✈️ 飞机</td>
+                                <td>速度快，节省时间</td>
+                                <td>价格浮动大，提前值机</td>
+                                <td>远距离、时间敏感</td>
+                            </tr>
+                            <tr>
+                                <td>🚘 自驾</td>
+                                <td>灵活自由，可携带年货</td>
+                                <td>路况拥堵，耗体力</td>
+                                <td>短中途、多人同行</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 家乡发展变化 -->
+    <section class="section" id="development">
+        <div class="container">
+            <h2 class="section-title">发现家乡新变化</h2>
+            <p class="section-sub">每一次返乡，都能看到家乡在进步</p>
+            <div class="grid-2col">
+                <div class="development-box">
+                    <div class="dev-header">
+                        <h3>🏗️ 基础设施升级</h3>
+                        <p style="opacity: 0.9;">道路更通畅，生活更便捷</p>
+                    </div>
+                    <div class="dev-body">
+                        <div class="dev-item">
+                            <div class="icon">🛣️</div>
+                            <div>
+                                <strong>农村公路改造</strong>
+                                <p>许多乡镇通上了柏油路，公交线路延伸至行政村，出行不再难。</p>
+                            </div>
+                        </div>
+                        <div class="dev-item">
+                            <div class="icon">📶</div>
+                            <div>
+                                <strong>网络覆盖提升</strong>
+                                <p>4G/5G网络基本覆盖乡村，电商直播、线上教育成为可能。</p>
+                            </div>
+                        </div>
+                        <div class="dev-item">
+                            <div class="icon">🏥</div>
+                            <div>
+                                <strong>医疗资源下沉</strong>
+                                <p>乡镇卫生院设备更新，远程会诊让大病不出县逐渐成为现实。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="development-box">
+                    <div class="dev-header" style="background: linear-gradient(135deg, #00695c, #00897b);">
+                        <h3>🌱 产业与就业</h3>
+                        <p style="opacity: 0.9;">家门口的就业机会增多</p>
+                    </div>
+                    <div class="dev-body">
+                        <div class="dev-item">
+                            <div class="icon">🏭</div>
+                            <div>
+                                <strong>乡村车间兴起</strong>
+                                <p>服装、电子、农产品加工等劳动密集型企业向乡镇布局，吸纳大量劳动力。</p>
+                            </div>
+                        </div>
+                        <div class="dev-item">
+                            <div class="icon">🍊</div>
+                            <div>
+                                <strong>特色农业品牌化</strong>
+                                <p>各地打造地理标志产品，电商渠道帮助农产品走出大山。</p>
+                            </div>
+                        </div>
+                        <div class="dev-item">
+                            <div class="icon">🏞️</div>
+                            <div>
+                                <strong>乡村旅游火热</strong>
+                                <p>生态旅游、民宿经济为返乡青年提供新舞台，闲置农房变身创客空间。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 创业就业 -->
+    <section class="job-section" id="job">
+        <div class="container">
+            <h2 class="section-title" style="color: #1a4d2e;">返乡就业创业支持</h2>
+            <p class="section-sub">多地出台扶持政策，让返乡更有底气</p>
+            <div class="grid-3col">
+                <div class="job-card">
+                    <h4>🏢 就业服务</h4>
+                    <p>各地人社部门组织"春风行动"，举办返乡专场招聘会，提供职业技能培训补贴。</p>
+                    <ul class="support-list">
+                        <li>岗位推荐</li>
+                        <li>技能培训</li>
+                        <li>社保接续</li>
+                    </ul>
+                </div>
+                <div class="job-card">
+                    <h4>💡 创业扶持</h4>
+                    <p>对符合条件的返乡创业人员，提供创业担保贷款、一次性创业补贴及场地支持。</p>
+                    <ul class="support-list">
+                        <li>贷款贴息</li>
+                        <li>税费减免</li>
+                        <li>免费孵化</li>
+                    </ul>
+                </div>
+                <div class="job-card">
+                    <h4>🌾 农业合作</h4>
+                    <p>新型农业经营主体带动小农户发展，提供技术指导与产销对接服务。</p>
+                    <ul class="support-list">
+                        <li>合作社</li>
+                        <li>家庭农场</li>
+                        <li>订单农业</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="toolbar" style="margin-top: 30px;">
+                <span class="tips">📢 想了解家乡具体的招聘会与创业政策，可关注当地人社局官网或公众号。</span>
+                <a href="#">查询本地信息</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">返乡常见问题解答</h2>
+            <p class="section-sub">关于返乡，你可能关心这些</p>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <div class="faq-question">返乡后需要报备吗？如何报备？</div>
+                    <div class="faq-answer">目前多数地区已取消强制报备要求，但部分乡镇或社区为便于服务，仍建议主动联系村委会或社区网格员进行信息登记。可通过电话、微信群或当地政务APP完成，具体以目的地要求为准。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">春运抢票有哪些技巧？</div>
+                    <div class="faq-answer">① 提前在12306进行人证核验；② 使用候补购票功能，成功率较高；③ 关注临时加开列车信息；④ 采用"买长乘短"或分段购票策略；⑤ 开售第一时间抢票，避免高峰期。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">自驾返乡需要准备什么应急物品？</div>
+                    <div class="faq-answer">建议随车携带：防滑链（北方必备）、充气泵、拖车绳、手电筒、保暖毯、食品饮用水、常用药品、手机充电宝等。出发前检查轮胎、刹车、油液和灯光。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">想返乡创业，有哪些注意事项？</div>
+                    <div class="faq-answer">首先做好市场调研，避免盲目投资。建议先参加当地组织的创业培训，了解扶持政策。优先选择与本地资源禀赋结合的产业，如农产品加工、乡村旅游、电商物流等。同时评估自身资金与风险承受能力。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">家乡有哪些新职业发展机会？</div>
+                    <div class="faq-answer">数字化催生了乡村规划师、农业经理人、农村电商主播、民宿管家、智慧农业技术员等新职业。这些岗位既需要专业技能，也需要对乡村的深入了解，返乡青年具备独特优势。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer-links">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">返乡资讯简介</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#policy">政策指南</a></li>
+                        <li><a href="#traffic">交通出行</a></li>
+                        <li><a href="#development">家乡变化</a></li>
+                        <li><a href="#job">创业就业</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>合作伙伴</h4>
+                    <ul>
+                        <li><a href="#">中国铁路</a></li>
+                        <li><a href="#">各地人社局</a></li>
+                        <li><a href="#">乡村振兴局</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>特别提醒</h4>
+                    <ul>
+                        <li><a href="#">谨防诈骗</a></li>
+                        <li><a href="#">安全出行</a></li>
+                        <li><a href="#">健康防护</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 返乡指南 · 温暖回家路 | 本页面信息仅供参考，请以官方发布为准</p>
+        </div>
+    </footer>
+
+    <!-- 回到顶部 -->
+    <button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+    <script>
+        // 移动端菜单
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('open');
+        });
+
+        // FAQ 手风琴
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                // 关闭其他
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+
+        // 回到顶部
+        const backTop = document.getElementById('backTop');
+        backTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backTop.style.opacity = '1';
+            } else {
+                backTop.style.opacity = '0';
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                      </html>
